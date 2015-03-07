@@ -1,0 +1,15 @@
+<md-list>
+	<md-item ng-repeat="item in estados">
+		<md-item-content>
+			<div class="md-tile-left">	
+				<img src="http://placehold.it/50x50" alt="{{item.nome}}">
+			</div>
+			<div class="md-tile-content">
+				<h3>{{item.nome}}</h3>
+				<p><a href="#/times/{{item.nome}}">Veja os times do estado de {{item.nome}}</a></p>
+			</div>
+		</md-item-content>
+	</md-item>
+</md-list>
+
+<md-progress-linear md-mode="indeterminate" ng-show="isLoading"></md-progress-linear>
