@@ -1,0 +1,19 @@
+<h2>Times de {{estado}}</h2>
+
+<div layout="row" layout-sm="column" layout-align="space-around" ng-show="isLoading">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<md-grid-list
+    md-cols-gt-md="12" md-cols-sm="2" md-cols-md="8"
+    md-row-height-gt-md="1:1" md-row-height="3:3"
+    md-gutter-gt-md="16px" md-gutter-gt-sm="8px" md-gutter="4px">
+  <md-grid-tile
+      ng-repeat="time in times"
+      md-colspan-gt-sm="2"
+      md-rowspan-gt-sm="2">
+      <a href="#/jogos/{{time.id}}">
+        <img ng-src="{{time.escudo['100x100']}}" />
+      </a>
+  </md-grid-tile>
+</md-grid-list>
